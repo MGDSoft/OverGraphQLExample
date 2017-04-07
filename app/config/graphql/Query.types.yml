@@ -1,0 +1,12 @@
+Query:
+    type: object
+    config:
+        description: "A humanoid creature in the Star Wars universe."
+        fields:
+            user:
+                type: "User"
+                args:
+                    episode:
+                        description: "If omitted, returns the hero of the whole saga. If provided, returns the hero of that particular episode."
+                        type: "Episode"
+                resolve: "@=resolver('myresolver', [args])"
